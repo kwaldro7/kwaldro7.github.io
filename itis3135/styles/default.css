@@ -33,3 +33,7 @@ figure {
     font-style: italic;
     font-size: small;
 }
+
+.centered-welcome {
+    text-align: center;
+}

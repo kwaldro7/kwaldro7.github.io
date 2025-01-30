@@ -1,0 +1,35 @@
+body {
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-family: 'Lucida Sans';
+}
+
+a {
+    color: #43b451;
+    text-decoration: none;
+}
+
+a:hover {
+    color: crimson;
+}
+
+main {
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h2 {
+    text-align: center;
+}
+
+img {
+    width: 70%;
+}
+
+figure {
+    text-align: center;
+    font-style: italic;
+    font-size: small;
+}

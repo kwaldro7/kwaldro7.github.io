@@ -3,6 +3,9 @@ body {
     text-align: center;
     color: #FFFFF0;
     font-family: 'Lucida Sans';
+    max-width: 900px;
+    margin: 0 auto;
+    width: 90%;
 }
 
 a {

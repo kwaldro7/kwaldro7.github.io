@@ -25,6 +25,8 @@ main {
 
 h2, h3 {
     text-align: center;
+    /* Define default font size here that works for all devices */
+    font-size: 1.5em;
 }
 
 img {
@@ -111,6 +113,7 @@ main, .maincontainer {
         width: 85%;
     }
     
+    /* Modify font-size property only instead of redefining h2, h3 */
     h2, h3 {
         font-size: 1.2em;
     }

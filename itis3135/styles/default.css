@@ -25,7 +25,6 @@ main {
 
 h2, h3 {
     text-align: center;
-    /* Define default font size here that works for all devices */
     font-size: 1.5em;
 }
 
@@ -97,7 +96,7 @@ main, .maincontainer {
 }
 
 /* Rule Overrides For Mobile Devices */
-@media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+@media screen and (min-width: 370px) and (max-width: 600px) {
     #colorbox {
         background-color: red;
     }
@@ -113,8 +112,7 @@ main, .maincontainer {
         width: 85%;
     }
     
-    /* Modify font-size property only instead of redefining h2, h3 */
-    h2, h3 {
-        font-size: 1.2em;
+    :root {
+        --heading-font-size: 1.2em; 
     }
 }

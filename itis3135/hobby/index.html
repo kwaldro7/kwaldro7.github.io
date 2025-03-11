@@ -3,25 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hobby || Keaton Waldron</title>
-    <style></style>
+    <title>Archery || Keaton Waldron</title>
+    <link rel="icon" type="image/png" href="images/bow-favicon.png">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #f5e8c7;
+            color: #2d4f36;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4a7049;
+            padding: 1em;
+            text-align: center;
+        }
+
+        h1 {
+            color: #f5e8c7;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #6b8e67;
+            padding: 1em;
+        }
+
+        nav a {
+            color: #f5e8c7;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            margin: 0 0.5em;
+            background-color: #4a7049;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background-color: #2d4f36;
+        }
+
+        nav img {
+            width: 20px;
+            vertical-align: middle;
+            margin: 0 0.5em;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            display: none;
+            margin-bottom: 2em;
+            background-color: #fff8e7;
+            padding: 1em;
+            border-radius: 5px;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h2 {
+            color: #4a7049;
+        }
+
+        figure {
+            margin: 1em 0;
+            text-align: center;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        figcaption {
+            color: #6b8e67;
+            font-style: italic;
+        }
+
+        footer {
+            background-color: #4a7049;
+            color: #f5e8c7;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .validation-btn {
+            display: inline-block;
+            background-color: #6b8e67;
+            color: #f5e8c7;
+            padding: 0.5em 1em;
+            margin: 0.5em;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .validation-btn:hover {
+            background-color: #2d4f36;
+        }
+
+        .designed-by {
+            margin-bottom: 1em;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Archery</h1>
+        <nav>
+            <a onclick="showSection('what')">Home</a>
+            <img src="images/bow-favicon.png" alt="divider">
+            <a onclick="showSection('who')">About Me</a>
+            <img src="images/bow-favicon.png" alt="divider">
+            <a onclick="showSection('when')">Best Seasons</a>
+            <img src="images/bow-favicon.png" alt="divider">
+            <a onclick="showSection('where')">Top Locations</a>
+            <img src="images/bow-favicon.png" alt="divider">
+            <a onclick="showSection('how')">Techniques</a>
+            <img src="images/bow-favicon.png" alt="divider">
+            <a onclick="showSection('why')">Why Archery</a>
+        </nav>
     </header>
     <main>
-        <section>
-            <h2>Who</h2>
+        <section id="what" class="active">
+            <h2>Home</h2>
+            <p>Archery is an ancient practice that combines precision, focus, and physical skill. It's both a competitive sport and a meditative hobby that people of all ages can enjoy.</p>
+            <p>The sport involves using a bow to shoot arrows at a target, testing accuracy and consistency. Whether you're a beginner or an expert, archery offers endless opportunities for growth and satisfaction.</p>
+            <figure>
+                <img src="images/archery-target.jpg" alt="Archery target">
+                <figcaption>A classic archery target in an outdoor range</figcaption>
+            </figure>
+            <p><i>AI Prompt: "Create a photorealistic image of an archery target in an outdoor range with green grass and a clear blue sky"</i></p>
         </section>
 
-        <section>
-            <h2>About</h2>
+        <section id="who">
+            <h2>About Me</h2>
+            <p>I'm Keaton Waldron, an archery enthusiast with 5 years of experience. I started this hobby to improve my focus and found a lifelong passion.</p>
+            <p>My favorite aspect is the mental challenge - each shot requires complete concentration and control.</p>
+            <figure>
+                <img src="images/archer-portrait.jpg" alt="Archer portrait">
+                <figcaption>Practicing at my local range</figcaption>
+            </figure>
+            <p><i>AI Prompt: "Photorealistic portrait of an archer in modern gear aiming at a target"</i></p>
+        </section>
+
+        <section id="when">
+            <h2>Best Seasons</h2>
+            <p>Spring and fall are ideal for outdoor archery due to mild weather and beautiful scenery.</p>
+            <table>
+                <tr><th>Season</th><th>Pros</th></tr>
+                <tr><td>Spring</td><td>Mild temps, new growth</td></tr>
+                <tr><td>Fall</td><td>Cool air, colorful leaves</td></tr>
+            </table>
+            <figure>
+                <img src="images/fall-archery.jpg" alt="Fall archery">
+                <figcaption>Archery in autumn colors</figcaption>
+            </figure>
+            <p><i>AI Prompt: "Photorealistic scene of an archery range in fall with colorful leaves"</i></p>
+        </section>
+
+        <section id="where">
+            <h2>Top Locations</h2>
+            <p>Great archery spots include local ranges, national parks with designated areas, and competitive venues.</p>
+            <p>My favorites are wooded areas that offer natural targets and challenging terrain.</p>
+            <figure>
+                <img src="images/forest-range.jpg" alt="Forest range">
+                <figcaption>A serene forest archery range</figcaption>
+            </figure>
+            <p><i>AI Prompt: "Photorealistic image of an archery range in a dense forest"</i></p>
+        </section>
+
+        <section id="how">
+            <h2>Techniques</h2>
+            <p>Proper stance and grip are crucial for consistent shooting. Practice drawing smoothly and releasing cleanly.</p>
+            <form>
+                <label>Rate your skills:</label><br>
+                <input type="radio" name="skill">Beginner<br>
+                <input type="radio" name="skill">Intermediate<br>
+                <input type="radio" name="skill">Advanced
+            </form>
+            <figure>
+                <img src="images/archery-form.jpg" alt="Archery form">
+                <figcaption>Perfecting my shooting form</figcaption>
+            </figure>
+            <p><i>AI Prompt: "Photorealistic image of an archer demonstrating proper shooting form"</i></p>
+        </section>
+
+        <section id="why">
+            <h2>Why Archery</h2>
+            <p>Archery builds focus, patience, and physical strength while connecting you with an ancient tradition.</p>
+            <p>It's a fantastic way to unplug from technology and enjoy time outdoors with friends or solo.</p>
+            <figure>
+                <img src="images/archery-group.jpg" alt="Archery group">
+                <figcaption>Friends enjoying archery together</figcaption>
+            </figure>
+            <p><i>AI Prompt: "Photorealistic image of a group of friends practicing archery"</i></p>
         </section>
     </main>
     <footer>
-
+        <div class="designed-by">
+            <a href="https://yourdesignfirm.com" style="color: #f5e8c7;">Designed by Waldron Designs</a>
+        </div>
     </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
 </body>
 </html>

@@ -13,15 +13,47 @@
     </header>
 
     <main>
-        <h1 class="centered-welcome">Order Form</h1>
+        <h1 class="centered-welcome">Kooky Walrus Order Form</h1>
 
         <form action="#">
-            <label for="name">Name: </label>
-            <input type="text" id="name" name="name" placeholder="Full Name">
+            <label for="name">Full Name: </label>
+            <input type="text" id="name" name="name" placeholder="John Snow" size="30" required>
 
-            <label for="number">Phone Number: </label>
+            <label for="phone">Phone Number: </label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" size="15" required>
+
+            <label for="email">Email Address: </label>
+            <input type="email" id="email" name="email" placeholder="johnsnow@gmail.com" size="30" required>
+
+            <fieldset>
+                <legend>Products to Order:</legend>
+                <input type="checkbox" id="product1" name="products" value="necklace">
+                <label for="product1">Golden Doubloon Necklace ($49.99)</label><br>
+                <input type="checkbox" id="product2" name="products" value="ring">
+                <label for="product2">Mystic Mermaid Ring ($29.99)</label><br>
+                <input type="checkbox" id="product3" name="products" value="figurine">
+                <label for="product3">Kooky Walrus Figurine ($19.99)</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferred Contact Method:</legend>
+                <input type="radio" id="phoneContact" name="contact" value="phone" required>
+                <label for="phoneContact">Phone</label>
+                <input type="radio" id="emailContact" name="contact" value="email">
+                <label for="emailContact">Email</label>
+            </fieldset>
+
+            <label for="shipping">Shipping Method:</label>
+            <select id="shipping" name="shipping" required>
+                <option value="">Select shipping option</option>
+                <option value="standard">Standard (5-7 days) - Free</option>
+                <option value="express">Express (2-3 days) - $9.99</option>
+                <option value="overnight">Overnight - $19.99</option>
+            </select>
+
+            <input type="reset" value="Reset Form">
+            <input type="submit" value="Submit Order">
         </form>
-        
     </main>
 
     <footer>

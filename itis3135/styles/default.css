@@ -145,3 +145,60 @@ caption {
     text-align: center;
     list-style-position: inside;
   }
+
+  /* Form Styling */
+form {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #1a1a1a;
+}
+
+label {
+    display: inline-block;
+    margin: 10px 0 5px 0;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    font-family: 'Lucida Sans';
+    background-color: #333;
+    color: #FFFFF0;
+    border: 1px solid #666;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+fieldset {
+    border: 1px solid #666;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+legend {
+    padding: 0 10px;
+}
+
+input[type="reset"],
+input[type="submit"] {
+    background-color: #333;
+    color: #FFFFF0;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 10px 0 0;
+    font-family: 'Lucida Sans';
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #555;
+}

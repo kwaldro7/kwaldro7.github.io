@@ -6,6 +6,7 @@
     <title>Keaton Waldron's Kooky Walrus || ITIS 3135 || BYO Intro</title>
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="scripts/survey.js" defer></script>
 </head>
 <body>
     <header>
@@ -14,8 +15,38 @@
 
     <main>
         <h2>Build Your Own Introduction</h2>
-        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+        <div id="formContainer">
+            <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+            <form id="introForm">
+                <label>Name: <input type="text" name="name" value="Keaton Waldron" required></label><br>
+                <label>Mascot: <input type="text" name="mascot" value="Kooky Walrus" required></label><br>
+                <label>Image: <input type="file" name="image" accept=".png,.jpg,.jpeg" required></label><br>
+                <label>Image Caption: <input type="text" name="caption" value="Kooky Walrus Portrait" required></label><br>
+                <label>Personal Background: <textarea name="personal" required>Grew up loving walruses...</textarea></label><br>
+                <label>Professional Background: <textarea name="professional" required>Student and aspiring developer...</textarea></label><br>
+                <label>Academic Background: <textarea name="academic" required>Studying at UNC Charlotte...</textarea></label><br>
+                <label>Web Dev Background: <textarea name="webdev" required>Taking ITIS 3135...</textarea></label><br>
+                <label>Primary Platform: <input type="text" name="platform" value="Windows" required></label><br>
+                
+                <div id="coursesSection">
+                    <label>Courses: </label>
+                    <button type="button" onclick="addCourseField()">Add Course</button>
+                    <div id="courseFields"></div>
+                </div><br>
 
+                <label>Funny Thing: <input type="text" name="funny" value="I talk to walruses"></label><br>
+                <label>Anything Else: <input type="text" name="else" value="Walrus enthusiast!"></label><br>
+                
+                <label>
+                    <input type="checkbox" name="agreement" required>
+                    I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
+                </label><br>
+
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+        </div>
+        <div id="resultContainer" style="display: none;"></div>
     </main>
 
     <footer>

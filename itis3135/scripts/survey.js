@@ -14,11 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const courseInputs = document.querySelectorAll('.course-input');
         const courses = Array.from(courseInputs).map((input) => input.value);
+        const imageFile = document.getElementById('introImage').files[0];
+        const imageUrl = imageFile ? URL.createObjectURL(imageFile) : '#';
 
         resultContainer.innerHTML = `
             <h2>Welcome, ${data.name}!</h2>
             <p>Mascot: ${data.mascot}</p>
-            <img src="#" alt="${data.caption}" id="userImage"> <!-- Note: File handling would need server-side processing -->
+            <img src="${imageUrl}" alt="${data.caption}" id="userImage">
             <p>Caption: ${data.caption}</p>
             <h3>Personal Background</h3>
             <p>${data.personal}</p>
@@ -42,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('reset', function() {
         document.getElementById('courseFields').innerHTML = '';
+        document.getElementById('loadImage').innerHTML = ''; // Clear preview image
     });
 });
 
@@ -61,6 +64,18 @@ function resetForm() {
     const resultContainer = document.getElementById('resultContainer');
     document.getElementById('introForm').reset();
     document.getElementById('courseFields').innerHTML = '';
+    document.getElementById('loadImage').innerHTML = ''; // Clear preview image
     resultContainer.style.display = 'none';
     formContainer.style.display = 'block';
+}
+
+function loadImage() {
+    const imageInput = document.getElementById('introImage');
+    const imageFile = imageInput.files[0];
+    if (imageFile) {
+        const imageUrl = URL.createObjectURL(imageFile);
+        document.getElementById('loadImage').innerHTML = `<img src="${imageUrl}" alt="Preview">`;
+    } else {
+        document.getElementById('loadImage').innerHTML = '<p>No image selected.</p>';
+    }
 }

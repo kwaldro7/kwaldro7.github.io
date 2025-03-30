@@ -20,7 +20,12 @@
             <form id="introForm">
                 <label>Name: <input type="text" name="name" value="Keaton Waldron" required></label><br>
                 <label>Mascot: <input type="text" name="mascot" value="Kooky Walrus" required></label><br>
-                <label>Image: <input type="file" name="image" accept=".png,.jpg,.jpeg" required></label><br>
+
+                <label>Image: </label>
+                <input type="file" name="file" id="introImage" required>
+                <button type="button" onclick="loadImage()">Click Here to Load</button>
+                <div id="loadImage"></div>
+
                 <label>Image Caption: <input type="text" name="caption" value="Kooky Walrus Portrait" required></label><br>
                 <label>Personal Background: <textarea name="personal" required>Grew up loving walruses...</textarea></label><br>
                 <label>Professional Background: <textarea name="professional" required>Student and aspiring developer...</textarea></label><br>

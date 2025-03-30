@@ -6,18 +6,15 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Get form data
         const formData = new FormData(form);
         const data = {};
         for (let [key, value] of formData.entries()) {
             data[key] = value;
         }
 
-        // Get courses
         const courseInputs = document.querySelectorAll('.course-input');
-        const courses = Array.from(courseInputs).map(input => input.value);
+        const courses = Array.from(courseInputs).map((input) => input.value);
 
-        // Generate result HTML
         resultContainer.innerHTML = `
             <h2>Welcome, ${data.name}!</h2>
             <p>Mascot: ${data.mascot}</p>

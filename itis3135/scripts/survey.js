@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>${data.webdev}</p>
             <p>Primary Platform: ${data.platform}</p>
             <h3>Courses</h3>
-            <ul>${courses.map(course => `<li>${course}</li>`).join('')}</ul>
+            <ul>${courses.map((course) => `<li>${course}</li>`).join('')}</ul>
             <p>Funny Thing: ${data.funny}</p>
             <p>Anything Else: ${data.else}</p>
             <button onclick="resetForm()">Reset Form</button>

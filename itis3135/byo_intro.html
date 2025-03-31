@@ -26,21 +26,42 @@
                 <button type="button" onclick="loadImage()">Click Here to Load</button>
                 <div id="loadImage"></div>
 
-                <label>Image Caption: <input type="text" name="caption" value="Kooky Walrus Portrait" required></label><br>
-                <label>Personal Background: <textarea name="personal" required>Grew up loving walruses...</textarea></label><br>
-                <label>Professional Background: <textarea name="professional" required>Student and aspiring developer...</textarea></label><br>
-                <label>Academic Background: <textarea name="academic" required>Studying at UNC Charlotte...</textarea></label><br>
-                <label>Web Dev Background: <textarea name="webdev" required>Taking ITIS 3135...</textarea></label><br>
-                <label>Primary Platform: <input type="text" name="platform" value="Windows" required></label><br>
+                <label>Image Caption: <input type="text" name="caption" value="Grad Photo" required></label><br>
+                <label>Personal Background: <textarea name="personal" required>I am originally from Indiana, but moved to North Carolina in 2012 and have lived here ever since!</textarea></label><br>
+                <label>Professional Background: <textarea name="professional" required>Front of House Team Member at Chick-fil-A at home since 2021.</textarea></label><br>
+                <label>Academic Background: <textarea name="academic" required>Graduated from a public high school, currently a sophomore at UNCC.</textarea></label><br>
+                <label>Background in this Subject: <textarea name="webdev" required>I have almost no experience with HTML or CSS, but I am excited to learn.</textarea></label><br>
+                <label>Primary Computer Platform: <input type="text" name="platform" value="Windows 11 Dell Laptop that’s on life support" required></label><br>
                 
                 <div id="coursesSection">
                     <label>Courses: </label>
                     <button type="button" onclick="addCourseField()">Add Course</button>
-                    <div id="courseFields"></div>
+                    <div id="courseFields">
+                        <div class="course-entry">
+                            <input type="text" class="course-input" value="ITSC 3688 - Computers and Their Impact on Society: A required course, but definitely one that is valuable, because I want to enhance my teamwork and presentation skills" required>
+                            <button type="button" onclick="this.parentElement.remove()">Delete</button>
+                        </div>
+                        <div class="course-entry">
+                            <input type="text" class="course-input" value="ITCS 3160 - Database Design and Implementation: A required course, but I would take it anyway to learn SQL because I am interested in Data Science" required>
+                            <button type="button" onclick="this.parentElement.remove()">Delete</button>
+                        </div>
+                        <div class="course-entry">
+                            <input type="text" class="course-input" value="HIST 2207 - Modern Latin America: I needed a non-Western history course in order to qualify for the History minor" required>
+                            <button type="button" onclick="this.parentElement.remove()">Delete</button>
+                        </div>
+                        <div class="course-entry">
+                            <input type="text" class="course-input" value="ITSC 3155 - Software Engineering: A required course, but it will also be good to learn some HTML and CSS from there and incorporate it into ITIS 3135" required>
+                            <button type="button" onclick="this.parentElement.remove()">Delete</button>
+                        </div>
+                        <div class="course-entry">
+                            <input type="text" class="course-input" value="ITIS 3135 - Web-Based Application Design and Development: I am interested in how websites work, especially the process of making them. I hope I get my own personal website out of this course that I can use to show potential employers" required>
+                            <button type="button" onclick="this.parentElement.remove()">Delete</button>
+                        </div>
+                    </div>
                 </div><br>
 
-                <label>Funny Thing: <input type="text" name="funny" value="I talk to walruses"></label><br>
-                <label>Anything Else: <input type="text" name="else" value="Walrus enthusiast!"></label><br>
+                <label>Funny/Interesting Item: <input type="text" name="funny" value="As a native from Indiana, I have to cheer for the Colts (even though we are NOT winning a Super Bowl in the foreseeable future)" required></label><br>
+                <label>I'd also like to Share: <input type="text" name="else" value="Blasting Disney songs makes any drive 100% better" required></label><br>
                 
                 <label>
                     <input type="checkbox" name="agreement" required>

@@ -15,27 +15,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const courseInputs = document.querySelectorAll('.course-input');
         const courses = Array.from(courseInputs).map((input) => input.value);
         const imageFile = document.getElementById('introImage').files[0];
-        const imageUrl = imageFile ? URL.createObjectURL(imageFile) : '#';
+        const imageUrl = imageFile ? URL.createObjectURL(imageFile) : 'images/keatonfence.jpg'; // Fallback to default image
 
         resultContainer.innerHTML = `
-            <h2>Welcome, ${data.name}!</h2>
-            <p>Mascot: ${data.mascot}</p>
-            <img src="${imageUrl}" alt="${data.caption}" id="userImage">
-            <p>Caption: ${data.caption}</p>
-            <h3>Personal Background</h3>
-            <p>${data.personal}</p>
-            <h3>Professional Background</h3>
-            <p>${data.professional}</p>
-            <h3>Academic Background</h3>
-            <p>${data.academic}</p>
-            <h3>Web Development Background</h3>
-            <p>${data.webdev}</p>
-            <p>Primary Platform: ${data.platform}</p>
-            <h3>Courses</h3>
-            <ul>${courses.map((course) => `<li>${course}</li>`).join('')}</ul>
-            <p>Funny Thing: ${data.funny}</p>
-            <p>Anything Else: ${data.else}</p>
-            <button onclick="resetForm()">Reset Form</button>
+            <h2>${data.name}: Introduction</h2>
+            <figure>
+                <img src="${imageUrl}" alt="${data.name}">
+                <figcaption>${data.caption}</figcaption>
+            </figure>
+            <ul>
+                <li><b>Personal Background: </b>${data.personal}</li>
+                <li><b>Professional Background: </b>${data.professional}</li>
+                <li><b>Academic Background: </b>${data.academic}</li>
+                <li><b>Background in this Subject: </b>${data.webdev}</li>
+                <li><b>Primary Computer Platform: </b>${data.platform}</li>
+                <li><b>Courses I'm Taking and Why:</b></li>
+                <ul>
+                    ${courses.map((course) => `<li><b>${course.split(': ')[0]}: </b>${course.split(': ')[1]}</li>`).join('')}
+                </ul>
+                <li><b>Funny/Interesting Item to Remember me by: </b>${data.funny}</li>
+                <li><b>I'd also like to Share: </b>${data.else}</li>
+            </ul>
+            <button onclick="resetForm()">Back to Form</button>
         `;
 
         formContainer.style.display = 'none';
@@ -44,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('reset', function() {
         document.getElementById('courseFields').innerHTML = '';
-        document.getElementById('loadImage').innerHTML = ''; // Clear preview image
+        document.getElementById('loadImage').innerHTML = '';
     });
 });
 
@@ -53,7 +54,7 @@ function addCourseField() {
     const div = document.createElement('div');
     div.className = 'course-entry';
     div.innerHTML = `
-        <input type="text" class="course-input" placeholder="Enter course name">
+        <input type="text" class="course-input" placeholder="Enter course name and reason (e.g., Course - Reason)" required>
         <button type="button" onclick="this.parentElement.remove()">Delete</button>
     `;
     courseFields.appendChild(div);
@@ -64,7 +65,7 @@ function resetForm() {
     const resultContainer = document.getElementById('resultContainer');
     document.getElementById('introForm').reset();
     document.getElementById('courseFields').innerHTML = '';
-    document.getElementById('loadImage').innerHTML = ''; // Clear preview image
+    document.getElementById('loadImage').innerHTML = '';
     resultContainer.style.display = 'none';
     formContainer.style.display = 'block';
 }

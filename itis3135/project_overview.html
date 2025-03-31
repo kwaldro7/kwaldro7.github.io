@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keaton Waldron's Kooky Walrus || ITIS 3135 || BYO Intro</title>
+    <title>Keaton Waldron's Kooky Walrus || ITIS 3135 || Project Overview</title>
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
     <header>
@@ -14,8 +15,148 @@
 
     <main>
         <h2>Project Overview</h2>
-        
 
+        <section>
+            <h3>Application Description and Purpose</h3>
+            <p>The proposed web application is an informative and interactive website for the UNC Charlotte (UNCC) Archery Club, a student-run organization dedicated to promoting archery as a sport and recreational activity. The purpose is to improve visibility of the club, facilitate communication among members, encourage recruitment of new members, and provide resources for individuals interested in learning archery basics. This site will serve as a central hub for club activities, member engagement, and community outreach.</p>
+        </section>
+
+        <section>
+            <h3>Intended Users</h3>
+            <ul>
+                <li><strong>Prospective Members</strong>: UNCC students interested in joining the archery club.</li>
+                <li><strong>Current Members</strong>: Active club participants seeking updates on events and resources.</li>
+                <li><strong>General Public</strong>: Archery enthusiasts or campus visitors curious about the club.</li>
+                <li><strong>Club Officers</strong>: Administrative users who may provide content updates.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Overview of Content</h3>
+            <p>The website will include:</p>
+            <ul>
+                <li>Club mission, history, and goals.</li>
+                <li>Event schedules and announcements.</li>
+                <li>Membership information and recruitment details.</li>
+                <li>Archery resources (e.g., beginner guides, equipment tips).</li>
+                <li>Photo gallery of past events and activities.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Client Information</h3>
+            <ul>
+                <li><strong>Name</strong>: Aby Nunez</li>
+                <li><strong>Organization</strong>: UNC Charlotte Archery Club</li>
+                <li><strong>Email</strong>: [private]</li>
+                <li><strong>Phone</strong>: [private]</li>
+            </ul>
+            <p>Aby Nunez is the president of the UNCC Archery Club and has agreed to provide content such as text descriptions, event details, and photos from club archives.</p>
+        </section>
+
+        <section>
+            <h3>Wireframe</h3>
+            <p>A wireframe for the default page (home page) was created using Draw.io and hosted on a UNCC Google Drive account.</p>
+            <figure>
+                <img src="images/wireframe.drawio.png" alt="Wireframe of Archery Club Home Page">
+                <figcaption>Figure 1: Wireframe for UNCC Archery Club Home Page</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h3>Site Map</h3>
+            <p>The site map outlines the structure of the website, created using Draw.io.</p>
+            <figure>
+                <img src="images/sitemap.drawio.png" alt="Site Map of Archery Club Website">
+                <figcaption>Figure 2: Site Map for UNCC Archery Club Website</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h3>Page Design</h3>
+
+            <h4>Home (index.html)</h4>
+            <ul>
+                <li><strong>Purpose</strong>: Welcome visitors and provide an overview of the club.</li>
+                <li><strong>Audience</strong>: All users.</li>
+                <li><strong>Content</strong>: Club introduction, featured event, latest news snippet.</li>
+                <li><strong>Data Entry</strong>: None.</li>
+                <li><strong>Buttons/Links</strong>: "Learn More" (to About Us), "Join Now" (to Join Us).</li>
+                <li><strong>Actions</strong>: Clicking buttons navigates to respective pages.</li>
+                <li><strong>Notes</strong>: Includes a hero image of an archery range.</li>
+            </ul>
+
+            <h4>About Us</h4>
+            <ul>
+                <li><strong>Purpose</strong>: Share the club’s mission, history, and team details.</li>
+                <li><strong>Audience</strong>: Prospective members, public.</li>
+                <li><strong>Content</strong>: Mission statement, club history, officer bios with photos.</li>
+                <li><strong>Data Entry</strong>: None.</li>
+                <li><strong>Buttons/Links</strong>: Links to social media profiles.</li>
+                <li><strong>Actions</strong>: Hyperlinks open external pages in new tabs.</li>
+                <li><strong>Notes</strong>: Uses a jQuery-UI accordion for officer bios.</li>
+            </ul>
+
+            <h4>Events</h4>
+            <ul>
+                <li><strong>Purpose</strong>: Display upcoming and past events.</li>
+                <li><strong>Audience</strong>: Current and prospective members.</li>
+                <li><strong>Content</strong>: Event calendar, descriptions, photo gallery link.</li>
+                <li><strong>Data Entry</strong>: None.</li>
+                <li><strong>Buttons/Links</strong>: "View Gallery" (to gallery section).</li>
+                <li><strong>Actions</strong>: Clicking scrolls to gallery on the same page.</li>
+                <li><strong>Notes</strong>: Uses AJAX to load event details from a JSON file.</li>
+            </ul>
+
+            <h4>Join Us</h4>
+            <ul>
+                <li><strong>Purpose</strong>: Provide membership info and collect interest via a form.</li>
+                <li><strong>Audience</strong>: Prospective members.</li>
+                <li><strong>Content</strong>: Benefits, requirements, contact form.</li>
+                <li><strong>Data Entry</strong>: Form fields (name, email, experience level).</li>
+                <li><strong>Validations</strong>: Email format, required fields.</li>
+                <li><strong>Buttons/Links</strong>: "Submit" button.</li>
+                <li><strong>Actions</strong>: Form submission shows a confirmation message.</li>
+                <li><strong>Notes</strong>: Form uses JavaScript for validation.</li>
+            </ul>
+
+            <h4>Resources</h4>
+            <ul>
+                <li><strong>Purpose</strong>: Offer educational content for archery beginners.</li>
+                <li><strong>Audience</strong>: All users, especially new archers.</li>
+                <li><strong>Content</strong>: Beginner’s guide, equipment list, safety tips.</li>
+                <li><strong>Data Entry</strong>: None.</li>
+                <li><strong>Buttons/Links</strong>: Dropdown menu for categories.</li>
+                <li><strong>Actions</strong>: Dropdown filters content dynamically.</li>
+                <li><strong>Notes</strong>: Interactive tooltips via jQuery-UI.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Dynamic Functionality</h3>
+            <ol>
+                <li><strong>Photo Gallery on Events Page</strong>
+                    <p>A clickable image carousel showcasing past events. Enhances engagement and promotes activities.</p>
+                    <p>Example: <a href="https://www.w3schools.com/howto/howto_js_slideshow.asp" target="_blank">W3Schools Slideshow</a></p>
+                </li>
+                <li><strong>Accordion for Officer Bios on About Us Page</strong>
+                    <p>Collapsible sections using jQuery-UI. Saves space and adds interactivity.</p>
+                    <p>Example: <a href="https://jqueryui.com/accordion/" target="_blank">jQuery-UI Accordion</a></p>
+                </li>
+                <li><strong>Form Validation and Submission on Join Us Page</strong>
+                    <p>Real-time validation with success message. Ensures valid data and feedback.</p>
+                    <p>Example: <a href="https://www.w3schools.com/js/js_validation.asp" target="_blank">W3Schools Validation</a></p>
+                </li>
+                <li><strong>Dynamic Event Loading on Events Page</strong>
+                    <p>AJAX call to load events from JSON. Simulates dynamic updates.</p>
+                    <p>Example: <a href="https://www.w3schools.com/jquery/ajax_get.asp" target="_blank">jQuery AJAX</a></p>
+                </li>
+                <li><strong>Interactive Tooltips on Resources Page</strong>
+                    <p>Hover-over tooltips for terms using jQuery-UI. Enhances learning.</p>
+                    <p>Example: <a href="https://jqueryui.com/tooltip/" target="_blank">jQuery-UI Tooltip</a></p>
+                </li>
+            </ol>
+        </section>
     </main>
 
     <footer>

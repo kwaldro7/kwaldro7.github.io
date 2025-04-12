@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keaton Waldron's Kooky Walrus || ITIS 3135 || Slideshow</title>
+    <link rel="stylesheet" href="styles/slideshow.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Slideshow</h2>
+        <div class="mySlides fade">
+            <img src="images/kaleidoscope.jpg" alt="Kaleidoscope">
+            <div class="caption">K - Kaleidoscope</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/emerald.jpg" alt="Emerald">
+            <div class="caption">E - Emerald (4th letter)</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/aurora.jpg" alt="Aurora">
+            <div class="caption">A - Aurora (5th letter)</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/telescope.jpg" alt="Telescope">
+            <div class="caption">T - Telescope (2nd letter)</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/orchid.jpg" alt="Orchid">
+            <div class="caption">O - Orchid (6th letter)</div>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="images/nebula.jpg" alt="Nebula">
+                <div class="caption">N - Nebula (1st letter)</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="thumbnail-container">
+            <a href="#" onclick="currentSlide(1)">K - Kaleidoscope</a>
+            <a href="#" onclick="currentSlide(2)">E - Emerald</a>
+            <a href="#" onclick="currentSlide(3)">A - Aurora</a>
+            <a href="#" onclick="currentSlide(4)">T - Telescope</a>
+            <a href="#" onclick="currentSlide(5)">O - Orchid</a>
+            <a href="#" onclick="currentSlide(6)">N - Nebula</a>
+        </div>
+        <div class="ai-prompts">
+            <h3>AI Image Generation Prompts (Grok AI)</h3>
+            <ul>                
+                <li>Kaleidoscope: "A colorful kaleidoscope pattern with symmetrical reds, blues, and yellows, vibrant, landscape orientation, 1920x1080"</li>
+                <li>Emerald: "A close-up of a sparkling emerald gemstone on a velvet surface, vivid green, landscape orientation, realistic, 1920x1080"</li>
+                <li>Aurora: "A glowing aurora borealis over a snowy mountain range, vivid greens and purples, clear night sky, landscape orientation, 1920x1080"</li>
+                <li>Telescope: "A sleek telescope on a grassy hill under a starry night sky, landscape orientation, realistic, 1920x1080"</li>
+                <li>Orchid: "A vibrant purple orchid in bloom in a tropical garden, sharp details, landscape orientation, realistic, 1920x1080"</li>
+                <li>Nebula: "A vibrant cosmic nebula with swirling purples and blues, glowing stars, landscape orientation, hyper-realistic, 1920x1080"</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

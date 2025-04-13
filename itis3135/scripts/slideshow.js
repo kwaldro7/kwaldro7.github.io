@@ -3,8 +3,12 @@ $(document).ready(function() {
 
     function showSlides(n) {
         let slides = $(".mySlides");
-        if (n > slides.length) { slideIndex = 1; }
-        if (n < 1) { slideIndex = slides.length; }
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
         slides.hide();
         slides.eq(slideIndex - 1).show();
     }

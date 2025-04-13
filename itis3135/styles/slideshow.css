@@ -12,10 +12,6 @@ header {
     padding: 1em;
 }
 
-header h1 {
-    margin: 0;
-}
-
 header p {
     font-style: italic;
 }
@@ -35,7 +31,6 @@ footer {
     padding: 1em;
     position: relative;
     bottom: 0;
-    width: 100%;
 }
 
 footer a {

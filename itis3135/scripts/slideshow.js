@@ -9,7 +9,7 @@ function showSlides(n) {
         slideIndex = slides.length;
     }
     slides.hide();
-    slides.eq(slideIndex - 1).show();
+    slides.eq(slideIndex - 1).fadeIn(); // Use fadeIn for smoother transition
 }
 
 function plusSlides(n) {
@@ -22,10 +22,12 @@ function currentSlide(n) {
 
 $(document).ready(function() {
     showSlides(slideIndex);
-    $(".prev").click(function() {
+    $(".prev").click(function(e) {
+        e.preventDefault(); // Prevent default anchor behavior
         plusSlides(-1);
     });
-    $(".next").click(function() {
+    $(".next").click(function(e) {
+        e.preventDefault();
         plusSlides(1);
     });
     $(".thumbnail-container a").click(function(e) {

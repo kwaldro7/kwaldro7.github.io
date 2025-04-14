@@ -10,10 +10,16 @@ header {
     color: white;
     text-align: center;
     padding: 1em;
+    
 }
 
 header p {
     font-style: italic;
+    
+}
+
+header a {
+    color: #ffd700;
 }
 
 main {

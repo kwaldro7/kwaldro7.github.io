@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/slideshow.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <script src="scripts/slideshow.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
@@ -14,38 +15,35 @@
     </header>
     <main>
         <h2>Slideshow</h2>
-        <div class="mySlides fade">
-            <img src="images/kaleidoscope.jpg" alt="Kaleidoscope">
-            <div class="caption">K - Kaleidoscope</div>
-        </div>
-
-        <div class="mySlides fade">
-            <img src="images/emerald.jpg" alt="Emerald">
-            <div class="caption">E - Emerald</div>
-        </div>
-
-        <div class="mySlides fade">
-            <img src="images/aurora.jpg" alt="Aurora">
-            <div class="caption">A - Aurora</div>
-        </div>
-
-        <div class="mySlides fade">
-            <img src="images/telescope.jpg" alt="Telescope">
-            <div class="caption">T - Telescope</div>
-        </div>
-
-        <div class="mySlides fade">
-            <img src="images/orchid.jpg" alt="Orchid">
-            <div class="caption">O - Orchid</div>
-        </div>
-
         <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="images/kaleidoscope.jpg" alt="Kaleidoscope">
+                <div class="caption">K - Kaleidoscope</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/emerald.jpg" alt="Emerald">
+                <div class="caption">E - Emerald</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/aurora.jpg" alt="Aurora">
+                <div class="caption">A - Aurora</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="images/telescope.jpg" alt="Telescope">
+                <div class="caption">T - Telescope</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="images/orchid.jpg" alt="Orchid">
+                <div class="caption">O - Orchid</div>
+            </div>
             <div class="mySlides fade">
                 <img src="images/nebula.jpg" alt="Nebula">
                 <div class="caption">N - Nebula (1st letter)</div>
             </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev">❮</a>
+            <a class="next">❯</a>
         </div>
         <div class="thumbnail-container">
             <a href="#" onclick="currentSlide(1)">K - Kaleidoscope</a>

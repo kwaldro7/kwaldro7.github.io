@@ -203,9 +203,6 @@ input[type="reset"]:hover {
 }
 
 .review-image {
-    margin: 0 auto;
-    margin-left: 9px;
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    border-radius: 5px;
 }

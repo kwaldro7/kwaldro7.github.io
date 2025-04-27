@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const accordionHeaders = document.querySelectorAll('.accordion-header');
     
     // Add click event listener to each header
-    accordionHeaders.forEach(header => {
+    accordionHeaders.forEach((header) => {
         header.addEventListener('click', function() {
             // Toggle active class on the clicked header
             this.classList.toggle('active');

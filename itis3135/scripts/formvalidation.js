@@ -1,3 +1,40 @@
+// Function to show error messages
+function showError(elementId, message) {
+    const errorElement = document.getElementById(elementId);
+    if (errorElement) {
+        errorElement.textContent = message;
+    }
+}
+
+// Function to clear all error messages
+function clearErrors() {
+    const errorElements = document.querySelectorAll('.error-message');
+    errorElements.forEach((element) => {
+        element.textContent = '';
+    });
+    
+    // Clear status message
+    const statusDiv = document.getElementById('submission-status');
+    if (statusDiv) {
+        statusDiv.textContent = '';
+        statusDiv.className = 'hidden';
+    }
+}
+
+// Function to validate email format
+function validateEmail(email) {
+    // Check for UNCC email format (ends with @charlotte.edu)
+    const regex = /^[^\s@]+@charlotte\.edu$/;
+    return regex.test(email);
+}
+
+// Function to validate student ID
+function validateStudentId(id) {
+    // Student ID should be 9 digits
+    const regex = /^\d{9}$/;
+    return regex.test(id);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Get form element
     const form = document.getElementById('joinForm');
@@ -57,39 +94,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Function to show error messages
-function showError(elementId, message) {
-    const errorElement = document.getElementById(elementId);
-    if (errorElement) {
-        errorElement.textContent = message;
-    }
-}
-
-// Function to clear all error messages
-function clearErrors() {
-    const errorElements = document.querySelectorAll('.error-message');
-    errorElements.forEach(element => {
-        element.textContent = '';
-    });
-    
-    // Clear status message
-    const statusDiv = document.getElementById('submission-status');
-    if (statusDiv) {
-        statusDiv.textContent = '';
-        statusDiv.className = 'hidden';
-    }
-}
-
-// Function to validate email format
-function validateEmail(email) {
-    // Check for UNCC email format (ends with @charlotte.edu)
-    const regex = /^[^\s@]+@charlotte\.edu$/;
-    return regex.test(email);
-}
-
-// Function to validate student ID
-function validateStudentId(id) {
-    // Student ID should be 9 digits
-    const regex = /^\d{9}$/;
-    return regex.test(id);
-}
